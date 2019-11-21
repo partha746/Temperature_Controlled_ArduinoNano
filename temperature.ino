@@ -25,13 +25,12 @@ void loop()
     Serial.print(hum);
     Serial.print(" %, Temp: ");
     Serial.print(temp);
-    if (temp >= 26){
+    if (temp >= 26.5){
       digitalWrite (Relay, HIGH); //LOW Actually
     }
     else{
       digitalWrite (Relay, LOW); //HIGH Actually
     }
-    Serial.print(char(248));
     Serial.println(" Celsius");
-    delay(30000);
+    delay(2000);
 }
